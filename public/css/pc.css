@@ -1,0 +1,29 @@
+body{background-color: #f7f7f7;}
+
+.homenavbar{background-color: #eeeeee;height: 50px;}
+.homenavbarbottom{height: 100px;width: 100%;}
+.homenavbottom{height: 100px;margin-left: 200px;margin-top: 30px;width: 600px;position: absolute;}
+.homenavleft{position: absolute;margin-left: 900px;margin-top: 30px;width: 200px;border: 1px solid #eeeeee;height: 45px;background-color: white;}
+.midnavbar{width: 1100px;margin: auto;}
+.body{width: 1100px;margin: auto;}
+.barandclass{height: 380px;}
+.classinfo{position: absolute;min-height: 380px;width: 200px;background-color: white;}
+.homeuserinfo{position: absolute;margin-left: 900px;width: 200px;height: 380px;background-color: white;}
+.bannerimg{position: absolute;margin-left: 200px;margin-top: 0px;}
+.banner{width: 680px;height: 380px;}
+.classinfo{max-height: 400px;width: 180px;overflow-y: auto;}
+.wangge{width: 160px;overflow: hidden;float: left;}
+.bottomnavbar{position: absolute;margin-bottom: 0px;margin-top: 50px;}
+
+
+#homenav-shopping{text-align: center;line-height: 45px;overflow: hidden;}
+ul.nav-tabs{float: right;text-align: left;border: none;}
+.wanggeimg img{width: 150px;height: auto;}
+.classinfo a{border: none;}
+
+.searchinput{width: 500px;}
+
+.logo{position: absolute;margin-top: 0px;width: 150px;height: 150px;background-color: white;}
+
+.color-red{color: red;}
+.color-black{color:black;}
