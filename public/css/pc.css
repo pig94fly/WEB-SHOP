@@ -14,16 +14,27 @@ body{background-color: #f7f7f7;}
 .classinfo{max-height: 400px;width: 180px;overflow-y: auto;}
 .wangge{width: 160px;overflow: hidden;float: left;}
 .bottomnavbar{position: absolute;margin-bottom: 0px;margin-top: 50px;}
+.showgoods{margin-top: 30px;}
+.goodsinfo{width: 600;height: 450px;position: absolute;margin-left: 500px;}
+.goodsname{height: 100px;overflow: hidden;width: 500px;}
+.goodsprice{min-height: 50px;}
+.goodscombo{min-height: 150px;}
+
 
 
 #homenav-shopping{text-align: center;line-height: 45px;overflow: hidden;}
 ul.nav-tabs{float: right;text-align: left;border: none;}
 .wanggeimg img{width: 150px;height: auto;}
 .classinfo a{border: none;}
+.showgoodsimage{width: 450px;height: 450px;float: left;}
+.goodsimageprev{position: absolute;margin-left: 0px;margin-top: 200px;}
+.goodsimagenext{position: absolute;margin-left: 385px;margin-top: 200px;}
 
 .searchinput{width: 500px;}
 
 .logo{position: absolute;margin-top: 0px;width: 150px;height: 150px;background-color: white;}
 
+.borderbottom{border-bottom: 1px solid;}
+.bordercolordddddd{border-color: #dddddd;}
 .color-red{color: red;}
 .color-black{color:black;}

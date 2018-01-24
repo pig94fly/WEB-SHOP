@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>后台管理-蒎商城</title>
+  </head>
+  <body>
+    <!-- 后台导航栏 -->
+    <div class="navbar">
+      <div class="midnavbar navbar navbar-form" role="navigation">
+        <!-- 导航栏右侧连接 -->
+          <ul class="nav nav-tabs float-right">
+            <li class="disabled"><a href="##" class="color-red">你好，管理员：7433</a></li>
+   	        <li class="disabled"><a href="##" class="color-black">商品管理</a></li>
+   	        <li><a href="usermanage.html" class="color-black">用户管理</a></li>
+            <!-- 下拉菜单实现，不影响边框 -->
+   	        <li id="adminmenu" class="text-center"><a href="##" class="color-black">管理员账户 <span class="glyphicon glyphicon-cog"></span></a>
+                <div class="" style="position:absolute">
+                  <ul class="nav nav-stacked" style="display:none" id="adminmenudiv">
+                    <li><a href="##" class="color-black">密码修改</a></li>
+                    <li><a href="##" class="color-black">权限管理</a></li>
+                    <li class="disabled text-center"><a href="##" class="color-black">更多功能敬请期待</a></li>
+                  </ul>
+                </div></li>
+   	        <li><a href="javascript:logout()" class="color-red">注销</a></li>
+          </ul>
+          <!-- logo -->
+          <div class="logo">
+            <h1 class="text-center">蒎<br/>Mall</h1><p class="text-center"><br>一个有思想的商城</p>
+          </div>
+      </div>
+    </div>
+      <div class="mainbox">
+        <!-- 主导航栏内容 -->
+        <!-- 商品管理页面 -->
+        <div id="goodsmanage">
+          <!-- 商品管理导航栏 -->
+          <div class="goodsnavbar">
+            <ul class="nav nav-tabs">
+              <li class="active" id="navcheckgoods"><a href="javascript:changegoodsnav('navcheckgoods')" class="color-black">搜索商品</a></li>
+              <li id="navaltergoods"><a href="javascript:changegoodsnav('navaltergoods')" class="color-black">商品修改</a></li>
+              <li id="navdropgoods"><a href="javascript:changegoodsnav('navdropgoods')" class="color-black">商品下架</a></li>
+              <li id="navgoodscomment"><a href="javascript:changegoodsnav('navgoodscomment')" class="color-black">评价管理</a></li>
+              <li id="navgoodsclass"><a href="javascript:changegoodsnav('navgoodsclass')" class="color-black">分类管理</a></li>
+
+            </ul>
+          </div>
+          <!-- 查看商品子页面 -->
+          <div class="bottomform">
+            <form role="form" id="goodsselect">
+              <div class="form-group col-md-2">
+                  <select name="classinfo" class="form-control"  id='classselect'>
+                  </select>
+              </div>
+              <div class="form-group col-md-2" >
+                  <select name="desc" class="form-control">
+                    <option value="default">排列顺序</option>
+                    <option value="time">最近发布</option>
+                    <option value="popular">热度排行</option>
+                    <option value="pricedesc">价格最高</option>
+                    <option value="priceasce">价格最低</option>
+                  </select>
+              </div>
+            </form>
+            <form role="form"class="" action="##" id="goodssearch">
+              <div class="col-md-2">
+                <input type="search" class="form-control"name="goodssearch" value="根据ID、名称搜索商品">
+              </div>
+              <button type="submit" name="submit" class="btn"><span class="glyphicon glyphicon-search color-white"></span></button>
+            </form>
+
+          </div>
+          <div class="bottombox">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="col-md-2 text-center">GoodsID</th>
+                  <th class="col-md-4 text-center">商品名称</th>
+                  <th class="col-md-1 text-center">建议售价</th>
+                  <th class="col-md-1 text-center">售价</th>
+                  <th class="col-md-1 text-center">销量</th>
+                  <th class="col-md-3 text-center">上架时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>表格单元格</td>
+                  <td>表格单元格</td>
+                  <td>表格单元格</td>
+                </tr>
+                <tr>
+                  <td>表格单元格</td>
+                  <td>表格单元格</td>
+                  <td>表格单元格</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 分页导航 -->
+            <ul class="pagination pagination">
+            </ul>
+          </div>
+        </div>
+
+      <div class="bottomnavbar navbar navbar-form" role="navigation">
+        <!-- 底部信息栏 -->
+        <div class="midnavbar">
+          <ul class="nav nav-tabs float-right">
+            <li class="disabled"><a href="##" class="color-red">蒎Mall商城</a></li>
+            <li class="disabled"><a href="##" class="color-black">Designed By ZZQ @ 2018</a></li>
+            <li><a href="##" class="color-black">http://togethergo.me</a></li>
+            <li><a href="##" class="color-black">联系我</a></li>
+            <li class="disabled"><a href="##" class="color-black"></a></li>
+          </ul>
+        </div>
+
+      </div>
+  </body>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../js/admin.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // alert(1);
+      page(1);
+      width = $(window).width();
+      changeselectpx(width);
+      getclassinfo();
+
+    });
+
+
+    function logout() {
+      alert(1);
+    }
+
+
+
+
+  </script>
+</html>

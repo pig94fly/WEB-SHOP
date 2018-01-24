@@ -16,11 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('verkehr/{dir}','VerkehrFileController@verk_dir');
-// Route::get('dir',function ()
-// {
-//   $file = file('api.php');
-//   foreach ($file as $value) {
-//     $files[] = htmlspecialchars($value);
-//   }
-//   return $files;
-// });
+Route::get('ajax/get','Ajax\GetController@index');
+Route::get('getcsrf',function ()
+{
+  session_start();
+  if (@!isset($_SESSION['user'])) {
+    echo "set session!";
+    $_SESSION['user'] = 'user';# code...
+  }
+  echo $_SESSION['user'];
+});

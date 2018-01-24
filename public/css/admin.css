@@ -1,0 +1,16 @@
+.logo{width: 200px;height: 200px;position: absolute;margin-top: 0px;}
+.navbar{height: 150px;background: #eeeeee;width: 100%;}
+.mainbox{width: 1200px;min-width: 1200px;margin: auto;}
+.bottomform{margin-top: 10px;border-bottom: 1px solid #eeeeee;padding-bottom: 10px;}
+.bottombox{margin-top: 10px;}
+.bottomnavbar{position: absolute;margin-bottom: 0px;margin-top: 50px;height: 40px;}
+
+
+ul.nav-tabs{text-align: left;border: none;}
+
+.margin-top-20{margin-top: 20px;}
+
+.float-right{float: right;}
+.color-black{color: black;}
+.color-red{color: red;}
+.color-white{color: white;}

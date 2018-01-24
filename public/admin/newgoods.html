@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>商品上新——蒎商城-后台</title>
+  </head>
+  <body>
+    <!-- 后台导航栏 -->
+    <div class="navbar">
+      <div class="midnavbar navbar navbar-form" role="navigation">
+        <!-- 导航栏右侧连接 -->
+          <ul class="nav nav-tabs float-right">
+            <li class="disabled"><a href="##" class="color-red">你好，管理员：7433</a></li>
+            <li><a href="javascript:showgoodsmanage()" class="color-black">商品管理</a></li>
+            <li><a href="javascript:showusermanage()" class="color-black">用户管理</a></li>
+            <!-- 下拉菜单实现，不影响边框 -->
+            <li><a href="##" class="color-black" id="adminmenu">管理员账户 <span class="glyphicon glyphicon-cog"></span></a>
+                <div class="" style="position:absolute">
+                  <ul class="nav nav-stacked" style="display:none" id="adminmenudiv">
+                    <li><a href="##" class="color-black">密码修改</a></li>
+                    <li><a href="##" class="color-black">权限管理</a></li>
+                    <li class="disabled text-center"><a href="##" class="color-black">更多功能敬请期待</a></li>
+                  </ul>
+                </div></li>
+            <li><a href="javascript:logout()" class="color-red">注销</a></li>
+          </ul>
+          <!-- logo -->
+          <div class="logo">
+            <h1 class="text-center">蒎<br/>Mall</h1><p class="text-center"><br>一个有思想的商城</p>
+          </div>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="mainbox">
+      <form class="" role="form" action="##" method="post">
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th>商品分类：</th>
+            <td><select class="form-control" name="goodsclass">
+                <option value="">1</option>
+                <option value="">3</option>
+                <option value="">2</option>
+            </select></td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>商品名称：</th>
+            <td><input type="text" name="goodsname" value="键入商品名称" size="25" class="form-control"></td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+
+          </tr>
+          <tr>
+            <th>商品主图：</th>
+            <td><input type="file" name="goodskeyimg" class="btn form-control"></td>
+            <th>副图：</th>
+            <td><input type="file" name="goodssecondimg" class="btn form-control"></td>
+          </tr>
+          <div id="showgoodskeyimage">          </div>
+
+            <tr id="goodscombo">
+              <th>combo：</th>
+              <td><input type="text" class="form-control" name="comboname[]" value="键入套餐组合名称"></td>
+              <td><input type="text" class="form-control" name="comboprice[]" value="价格"></td>
+              <th class="text-center"><a href="javascript:addCombo()" class="color-black"><p>添加COMBO<span class="glyphicon glyphicon-plus"></span></p></a></th>
+            </tr>
+
+          <tr>
+            <th>文字详情：</th>
+            <td><input type="text" name="goodsdetail" class="form-control"></td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>图片详细：</th>
+            <td><input type="file" name="goodsdetailimg" multiple="multiple"></td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+
+          </tr>
+          <tr>
+            <th> &nbsp;</th>
+            <th> &nbsp;</th>
+            <th> &nbsp;</th>
+            <th> &nbsp;</th>
+          </tr>
+          <tr>
+            <td>&nbsp;</td><td class="text-center"><input type="submit" name="sub" value="SUB" class="btn btn-lg"></td><td class="text-center"><input type="button" name="" value="重置" class="btn"></td><td>&nbsp;</td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class="bottomnavbar navbar navbar-form" role="navigation">
+      <!-- 底部信息栏 -->
+      <div class="midnavbar">
+        <ul class="nav nav-tabs float-right">
+          <li class="disabled"><a href="##" class="color-red">蒎Mall商城</a></li>
+          <li class="disabled"><a href="##" class="color-black">Designed By ZZQ @ 2018</a></li>
+          <li><a href="##" class="color-black">http://togethergo.me</a></li>
+          <li><a href="##" class="color-black">联系我</a></li>
+          <li class="disabled"><a href="##" class="color-black"></a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function addCombo() {
+      $('#goodscombo').after('<tr><th>combo：</th><td><input type="text" class="form-control" name="comboname[]" value="键入套餐组合名称"></td><td><input type="text" class="form-control" name="comboprice[]" value="价格"></td><td>&nbsp;</td></tr>');
+    }
+  </script>
+</html>
